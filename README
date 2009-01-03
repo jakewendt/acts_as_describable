@@ -1,0 +1,29 @@
+ActsAsDescribable
+=================
+
+ActsAsDescribable creates a PolymorphicDescription model which can point to any other model, hence the 'Polymorphic' prefix, and the virtual attribute 'description' to access it and its 'body'.  Using this, you can keep a large body of text separate from other data and tables possibly speeding up queries.
+
+Options
+======
+
+required (default: false)
+- When set to true, description cannot be blank. 
+
+
+Example
+=======
+
+class Listing < ActiveRecord::Base
+	acts_as_describable :required => true
+end
+
+Listing.new.description
+
+
+class Store < ActiveRecord::Base
+	acts_as_describable
+end
+
+
+
+Copyright (c) 2008 [George 'Jake' Wendt III (upillar.com)], released under the MIT license
