@@ -18,7 +18,6 @@ module Upillar
 
 					has_one	:polymorphic_description, :as => :describable, :dependent => :destroy
 
-#	is this necessary? YES, if you want it updatable via update_attributes
 					if self.accessible_attributes
 						attr_accessible :description
 					end
@@ -42,10 +41,8 @@ module Upillar
 
 				def description=(desc)
 					if self.polymorphic_description
-#						self.polymorphic_description.update_attribute(:body => desc)
 						self.polymorphic_description.body = desc
 					else
-#						self.polymorphic_description = PolymorphicDescription.create({:body => desc})
 						self.polymorphic_description = PolymorphicDescription.new({:body => desc})
 					end
 				end

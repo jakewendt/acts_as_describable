@@ -1,7 +1,15 @@
 ActsAsDescribable
 =================
 
-ActsAsDescribable creates a PolymorphicDescription model which can point to any other model, hence the 'Polymorphic' prefix, and the virtual attribute 'description' to access it and its 'body'.  Using this, you can keep a large body of text separate from other data and tables possibly speeding up queries.
+ActsAsDescribable creates a PolymorphicDescription model which can point to any other model, hence the 'Polymorphic' prefix, and the virtual attribute 'description' to access it and its 'body'.  Using this, you can keep a large body of text separate from other data and tables possibly speeding up your queries.
+
+No installation script yet so will need to run ...
+
+> rake acts_as_describable:import:migrations
+> rake db:migrate
+
+... to add the descriptions table to your database.
+
 
 Options
 ======

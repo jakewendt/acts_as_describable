@@ -1,7 +1,6 @@
 require 'test/unit'
 require 'rubygems'
 require 'active_record'
-#require File.dirname(__FILE__) + '/../init'
 
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'acts_as_describable'

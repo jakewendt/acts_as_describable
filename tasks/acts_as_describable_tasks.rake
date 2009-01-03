@@ -2,7 +2,7 @@ namespace :acts_as_describable do
 
 	namespace :import do
 
-		desc "Import plugin migration files into db/migrate/"
+		desc "Import plugin migration file(s) into db/migrate/"
 		task :migrations => :environment do
 			require 'rails_generator'
 			require 'rails_generator/scripts/generate'
