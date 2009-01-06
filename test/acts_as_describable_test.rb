@@ -1,6 +1,8 @@
 require 'test/unit'
 require 'rubygems'
 require 'active_record'
+#require 'active_support'
+require 'active_support/test_case'
 
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'acts_as_describable'
@@ -42,6 +44,7 @@ class Listing < ActiveRecord::Base
 end
 
 
+#class ActsAsDescribableTest < ActiveSupport::TestCase
 class ActsAsDescribableTest < Test::Unit::TestCase
 
 	def setup
