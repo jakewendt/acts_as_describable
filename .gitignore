@@ -1,0 +1,15 @@
+.DS_Store
+.svn/
+versions/
+db/*.sqlite3
+db/seeds.rb
+db/schema.rb
+log/*
+tmp/**/*
+coverage
+coverage.data
+config/fed_ex.yml
+config/database.yml
+config/initializers/session_store.rb
+public/javascripts-prototype/
+packages_updated.*
